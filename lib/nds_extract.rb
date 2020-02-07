@@ -8,25 +8,24 @@ def directors_totals(nds)
   #
   # The Hash result be full of things like "Jean-Pierre Jeunet" => "222312123123"
 
-  imdb = nds  #import the database
+  # imdb = nds  #import the database
   row_index = 0 #start with the 1st director in the array
-  while row_index < imdb.count do 
+  while row_index < nds.count do 
     movie_gross = 0 
-    director_name = imdb[row_index][:name]
-    result = { director_name => 0 }
+    director_name = nds[row_index][:name]
+    # result = { director_name => 0 }
     gross_index = 0  
     
-    # puts "this is #{row_index + 1} #{director_name}"
     
-      while gross_index < imdb[row_index][:movies].length do
+      while gross_index < nds[row_index][:movies].length do
 
         # movie_gross_old = result[director_name]
         # movie_gross_new = imdb[row_index][:movies][gross_index][:worldwide_gross]
         # movie_gross_total = movie_gross_old + movie_gross_new
         
-        movie_gross_new += imdb[row_index][:movies][gross_index][:worldwide_gross]
+        movie_gross_new += nds[row_index][:movies][gross_index][:worldwide_gross]
         
-        result[director_name] = movie_gross_total
+        directors_gross[director_name] = movie_gross_total
         gross_index += 1
       end 
     # puts "#{director_name} has grossed $#{movie_gross_total}"
@@ -35,5 +34,5 @@ def directors_totals(nds)
    end
   
   # Be sure to return the result at the end!
-  result
+  directors_gross
 end
