@@ -18,14 +18,8 @@ def directors_totals(nds)
     
     
       while gross_index < nds[row_index][:movies].length do
-
-        # movie_gross_old = result[director_name]
-        # movie_gross_new = imdb[row_index][:movies][gross_index][:worldwide_gross]
-        # movie_gross_total = movie_gross_old + movie_gross_new
-        
-        movie_gross_new += nds[row_index][:movies][gross_index][:worldwide_gross]
-        
-        directors_gross[director_name] = movie_gross_total
+        movie_gross += nds[row_index][:movies][gross_index][:worldwide_gross]
+        directors_gross[director_name] = movie_gross
         gross_index += 1
       end 
     # puts "#{director_name} has grossed $#{movie_gross_total}"
