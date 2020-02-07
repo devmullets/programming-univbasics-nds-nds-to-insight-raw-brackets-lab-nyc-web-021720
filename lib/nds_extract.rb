@@ -4,9 +4,10 @@ require 'directors_database'
 def directors_totals(nds)
  
   row_index = 0 #start with the 1st director in the array
+  directors_gross = {}
   while row_index < nds.count do 
+    movie_gross = 0 
     
-    directors_gross = {}
     gross_index = 0  
     
       while gross_index < nds[row_index][:movies].length do
