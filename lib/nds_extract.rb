@@ -23,9 +23,10 @@ def directors_totals(nds)
         directors_gross[director_name] = movie_gross
         gross_index += 1
       end 
-    # puts "#{director_name} has grossed $#{movie_gross_total}"
+    puts "#{director_name} has grossed $#{movie_gross}"
     # puts "This is what I have logged #{result[director_name]}"
     row_index += 1 
+    
    end
   
   # Be sure to return the result at the end!
